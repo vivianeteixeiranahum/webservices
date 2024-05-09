@@ -78,7 +78,7 @@ if ($rota[1] == "usuarios") {
             $parametros = file_get_contents('php://input');
             $parametros = (array) json_decode($parametros, true);
             $usuario->id = $rota[2];
-            $usuario->nome = $parametros['nome'];
+            $usuario->nome = $parametros['nome']; 
             $usuario->login = $parametros['login'];
             $usuario->senha = $parametros['senha'];
 

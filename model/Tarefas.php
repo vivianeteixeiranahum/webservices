@@ -48,7 +48,7 @@ class Tarefas {
         $stmt->execute();
         $row = $stmt->fetch(PDO::FETCH_ASSOC);
         if ($row) {
-            $this->titulo = $row['titulo'];
+            $this->titulo = $row['titulo']; 
             $this->descricao = $row['descricao'];
             $this->id_usuario = $row['id_usuario'];
             return $row;

@@ -10,7 +10,7 @@ class Usuario {
     public $senha;
  
     public function __construct($db) {
-        $this->conn = $db;
+        $this->conn = $db; 
     }
 
     // Criar usuário 
