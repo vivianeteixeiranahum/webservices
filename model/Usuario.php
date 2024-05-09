@@ -6,14 +6,14 @@ class Usuario {
     
     public $id;
     public $nome;
-    public $login;
+    public $login; 
     public $senha;
-
+ 
     public function __construct($db) {
         $this->conn = $db;
     }
 
-    // Criar usuário
+    // Criar usuário 
     public function create() {
         $query = 'INSERT INTO ' . $this->table_name . ' SET nome = :nome, login = :login, senha = :senha';
         $stmt = $this ->conn->prepare($query);
@@ -34,6 +34,7 @@ class Usuario {
 
     // Ler usuários
     public function getAll() {
+        
         $query = 'SELECT * FROM ' . $this->table_name;
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
